@@ -49,16 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-
-//$db['default']['username'] = 'aesiaorg_igni995';
 $db['default']['username'] = 'root';
-
-//$db['default']['password'] = '2SPT.2F7!g';
 $db['default']['password'] = 'adminadmin';
-
-//$db['default']['database'] = 'aesiaorg_igni995';
 $db['default']['database'] = 'aesiaorg';
-
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
