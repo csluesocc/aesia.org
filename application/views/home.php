@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="homeApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -12,23 +12,23 @@
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= base_url()?>public/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap.css">
-
+    <link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap.css">
+    
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="<?= base_url()?>public/css/main.css">
-
+	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	<script src="<?= base_url()?>public/js/html5shiv.js"></script>
-	<script src="<?= base_url()?>public/js/respond.min.js"></script>
+	<script src="<?= base_url()?>public/js/libs/html5shiv.js"></script>
+	<script src="<?= base_url()?>public/js/libs/respond.min.js"></script>
 	<![endif]-->
 </head>
 
 <body class="home">
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<div class="navbar navbar-inverse navbar-fixed-top headroom custon-nav">
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
@@ -40,12 +40,12 @@
 					<li class="active"><a href="#">Inicio</a></li>
 					<li><a href="about.html">¿Quienes Somos?</a></li>
 					<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sidebar-left.html">Proyectos</a></li>
 							<li class="active"><a href="sidebar-right.html">Comites</a></li>
-<li class="active"><a href="sidebar-right.html">Comunidades</a></li>
-<li class="active"><a href="sidebar-right.html">Galeria</a></li>
+                            <li class="active"><a href="sidebar-right.html">Comunidades</a></li>
+                            <li class="active"><a href="sidebar-right.html">Galeria</a></li>
 						</ul>
 					</li>
 					<li><a href="contact.html">Contacto</a></li>
@@ -57,7 +57,7 @@
 	<!-- /.navbar -->
 
 	<!-- Header -->
-	<header >
+	<header ng-controller="headerCtrl">
 	
             <!--Slider-->
             <section id="miSlide" class="carousel slide">
@@ -68,16 +68,13 @@
                 </ol>
 
                 <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="<?= base_url()?>public/images/cali.jpg" class="adaptar">
-                    </div>
-                    <div class="item">
-                        <img src="<?= base_url()?>public/images/2.jpg" class="adaptar">
-                    </div>
-                    <div class="item">
-                        <img src="<?= base_url()?>public/images/mac.jpg" class="adaptar">
-                      
-                    </div>
+                    <div ng-class="{item:true, active:($index==0)}" ng-repeat="img in sliderImgs" ng-cloak>
+                        <img ng-src="<?= base_url()?>public/images/slider/{{img.img}}" ng-class="{'img-responsive':true, 'firstImg':($index==0)}"/>
+                        <div class="carousel-caption">
+                            <h3>{{img.titulo}}</h3>
+                            <p>{{img.descripcion}}</p>
+                        </div>
+                    </div>                    
                 </div>
 
                 <a href="#miSlide" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
@@ -237,11 +234,14 @@
 
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="<?= base_url()?>public/js/headroom.min.js"></script>
-	<script src="<?= base_url()?>public/js/jQuery.headroom.min.js"></script>
-	<script src="<?= base_url()?>public/js/template.js"></script>
- <script src="<?= base_url()?>public/js/bootstrap.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    
+    <script src="<?= base_url()?>public/js/libs/headroom.min.js"></script>
+    <script src="<?= base_url()?>public/js/libs/jQuery.headroom.min.js"></script>    	
+	<script src="<?= base_url()?>public/js/template.js"></script>        
+	<script src="<?= base_url()?>public/js/libs/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+    <script src="<?= base_url()?>public/js/homeApp.js"></script>
+    <script src="<?= base_url()?>public/js/controllers/sliderCtrl.js"></script>
 
 </body>
 </html>
