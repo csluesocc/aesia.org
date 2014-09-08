@@ -48,10 +48,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+//$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
+//$db['default']['username'] = 'aesiaorg_igni995';
 $db['default']['password'] = 'adminadmin';
+//$db['default']['password'] = 'aesiaORG2014';
 $db['default']['database'] = 'aesiaorg';
+//$db['default']['database'] = 'aesiaorg_igni995';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
