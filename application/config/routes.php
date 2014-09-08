@@ -39,6 +39,9 @@
 */
 
 $route['default_controller'] = "main";
+$route['quienes_somos'] = "main/quienes_somos";
+$route['contacto'] = "main/contacto";
+$route['congreso2013'] = "main/congreso2013o ";
 $route['404_override'] = '';
 
 

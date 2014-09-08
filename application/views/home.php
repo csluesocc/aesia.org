@@ -1,63 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="homeApp">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
 	
 	
-	<title>AESIA</title>
-
-	<link rel="shortcut icon" href="<?= base_url()?>public/images/gt_favicon.ico">
-	
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?= base_url()?>public/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap.css">
-    
-
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="<?= base_url()?>public/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="<?= base_url()?>public/css/main.css">
-	
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="<?= base_url()?>public/js/libs/html5shiv.js"></script>
-	<script src="<?= base_url()?>public/js/libs/respond.min.js"></script>
-	<![endif]-->
+	<title>AESIA | Asociación de Estudiantes de Ingeniería y Arquitectura</title>
+    <!-- head commun -->
+	<?= $this->load->view('comun_head')?>
 </head>
 
 <body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom custon-nav">
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html">AESIA</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Inicio</a></li>
-					<li><a href="about.html">¿Quienes Somos?</a></li>
-					<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Proyectos</a></li>
-							<li class="active"><a href="sidebar-right.html">Comites</a></li>
-                            <li class="active"><a href="sidebar-right.html">Comunidades</a></li>
-                            <li class="active"><a href="sidebar-right.html">Galeria</a></li>
-						</ul>
-					</li>
-					<li><a href="contact.html">Contacto</a></li>
-					
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+    <!--menubar-->
+	<?= $this->load->view('menu')?>
 
 	<!-- Header -->
-	<header ng-controller="headerCtrl">
+	<header>
 	
             <!--Slider-->
             <section id="miSlide" class="carousel slide">
@@ -68,13 +26,27 @@
                 </ol>
 
                 <div class="carousel-inner">
-                    <div ng-class="{item:true, active:($index==0)}" ng-repeat="img in sliderImgs" ng-cloak>
-                        <img ng-src="<?= base_url()?>public/images/slider/{{img.img}}" ng-class="{'img-responsive':true, 'firstImg':($index==0)}"/>
+                    <div class="item active">
+                        <img src="<?= base_url()?>public/images/slider/1.png" class="img-responsive firstImg"/>
                         <div class="carousel-caption">
-                            <h3>{{img.titulo}}</h3>
-                            <p>{{img.descripcion}}</p>
+                            <h3></h3>
+                            <p></p>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="item">
+                        <img src="<?= base_url()?>public/images/slider/2.png" class="img-responsive firstImg"/>
+                        <div class="carousel-caption">
+                            <h3>Junta directiva de AESIA</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="<?= base_url()?>public/images/slider/3.png" class="img-responsive firstImg"/>
+                        <div class="carousel-caption">
+                            <h3>Nuevo Ingreso</h3>
+                            <p>Bienvenida estudiantes de nuevo ingreso 2014</p>
+                        </div>
+                    </div>
                 </div>
 
                 <a href="#miSlide" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
@@ -106,13 +78,16 @@
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4>Misión</h4></div>
 					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi, sequi quis ad fugit omnis cumque a libero error nesciunt molestiae repellat quos perferendis numquam quibusdam rerum repellendus laboriosam reprehenderit! </p>
+						<p>Somos una asociación estudiantil que promueve el desarrollo integral de los estudiantes de ingeniería y arquitectura de la
+						    UES FMOcc, fortaleciendo la formación profesional competente, creando agentes de cambio comprometidos con el desarrollo del país.</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
 					<div class="h-caption"><h4>Visión</h4></div>
 					<div class="h-body text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, vitae, perferendis, perspiciatis nobis voluptate quod illum soluta minima ipsam ratione quia numquam eveniet eum reprehenderit dolorem dicta nesciunt corporis?</p>
+						<p>ser una asociación reconocida a nivel naciona por fomentar el profesionalismo, la creatividad, y la conciencia social en los
+						    estudiantes, logrando así generar desarrollo y bienestar en la sociedad salvadoreña.
+</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 highlight">
@@ -159,12 +134,7 @@
 				<p>texto descriptivo.</p>
 			</div>
 		</div> <!-- /row -->
-
-		<div class="jumbotron top-space">
-			<h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>
-     		<p class="text-right"><a class="btn btn-primary btn-large">Ir a Blog »</a></p>
-  		</div>
-
+		
 </div>	<!-- /container -->
 	
 
@@ -192,7 +162,7 @@
 								<a href=""><i class="fa fa-twitter fa-2"></i></a>
 								
 
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+								<a href="https://www.facebook.com/AESIAFmocc"><i class="fa fa-facebook fa-2"></i></a>
 							</p>	
 						</div>
 					</div>
@@ -205,7 +175,7 @@
 						</div>
 					</div>
 
-				</div> <!-- /row of widgets -->
+				</div>
 			</div>
 		</div>
 
@@ -222,7 +192,7 @@
 						</div>
 					</div>
 
-				</div> <!-- /row of widgets -->
+				</div> 
 			</div>
 		</div>
 
@@ -232,7 +202,7 @@
 
 
 
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    
     <script src="<?= base_url()?>public/js/libs/headroom.min.js"></script>
@@ -240,8 +210,7 @@
 	<script src="<?= base_url()?>public/js/template.js"></script>        
 	<script src="<?= base_url()?>public/js/libs/bootstrap.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+	<script src="<?= base_url()?>public/js/controllers/homeSliderCtrl.js"></script>
     <script src="<?= base_url()?>public/js/homeApp.js"></script>
-    <script src="<?= base_url()?>public/js/controllers/sliderCtrl.js"></script>
-
 </body>
 </html>

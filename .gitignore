@@ -11,3 +11,6 @@ application/logs/*
 #aptana
 .settings/
 .project
+
+#others
+*~

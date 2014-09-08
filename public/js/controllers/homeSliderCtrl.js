@@ -1,7 +1,9 @@
 /**
  * @author Carlos Carcamo
  */
-homeApp.controller('headerCtrl', ['$scope', function($scope){
+angular.module('homeSliderApp', [])
+
+.controller('headerCtrl', ['$scope', function($scope){
 	$scope.sliderImgs = [
 			{
 				img:"1.png",
