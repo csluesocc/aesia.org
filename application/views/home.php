@@ -3,20 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	
-	
+
+
 	<title>AESIA | Asociación de Estudiantes de Ingeniería y Arquitectura</title>
     <!-- head commun -->
-	<?= $this->load->view('comun_head')?>
+	<?= $this->load->view('comun/comun_head')?>
 </head>
 
 <body class="home">
     <!--menubar-->
-	<?= $this->load->view('menu')?>
+	<?= $this->load->view('comun/menu')?>
 
 	<!-- Header -->
 	<header>
-	
+
             <!--Slider-->
             <section id="miSlide" class="carousel slide">
                 <ol class="carousel-indicators">
@@ -51,7 +51,7 @@
 
                 <a href="#miSlide" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-arrow-left"></span></a>
                 <a href="#miSlide" class="right carousel-control" data-slide="next"> <span class="glyphicon glyphicon-arrow-right"></span></a>
-           </section>	
+           </section>
 
 			</div>
 		</div>
@@ -61,11 +61,11 @@
 	<!-- Intro -->
 
 	<!-- /Intro-->
-		
+
 	<!-- Highlights - jumbotron -->
 	<div class="jumbotron top-space">
 		<div class="container">
-			
+
 			<h3 class="text-center thin">Asociacion de Estudiantes de Ingenieria y Arquitectura</h3>
 			
 			<div class="row">
@@ -97,7 +97,7 @@
 					</div>
 				</div>
 			</div> <!-- /row  -->
-		
+
 		</div>
 	</div>
 	<!-- /Highlights -->
@@ -125,8 +125,8 @@
 			<div class="col-sm-6">
 				<h3>Como formar parte de la Asociacion</h3>
 				<p>
-					 
-				Texto descritivo 
+
+				Texto descritivo
 				</p>
 			</div>
 			<div class="col-sm-6">
@@ -134,16 +134,16 @@
 				<p>texto descriptivo.</p>
 			</div>
 		</div> <!-- /row -->
-		
+
 </div>	<!-- /container -->
-	
+
 
 	<footer id="footer" class="top-space">
 
 		<div class="footer1">
 			<div class="container">
 				<div class="row">
-					
+
 					<div class="col-md-3 widget">
 						<h3 class="widget-title">Contacto</h3>
 						<div class="widget-body">
@@ -151,7 +151,7 @@
 								<a href="mailto:#">aesia@ejemplo.com</a><br>
 								<br>
 								Santa Ana, EL salvador
-							</p>	
+							</p>
 						</div>
 					</div>
 
@@ -160,10 +160,10 @@
 						<div class="widget-body">
 							<p class="follow-me-icons">
 								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								
+
 
 								<a href="https://www.facebook.com/AESIAFmocc"><i class="fa fa-facebook fa-2"></i></a>
-							</p>	
+							</p>
 						</div>
 					</div>
 
@@ -182,7 +182,7 @@
 		<div class="footer2">
 			<div class="container">
 				<div class="row">
-					
+
 
 					<div class="col-md-6 widget">
 						<div class="widget-body">
@@ -192,22 +192,22 @@
 						</div>
 					</div>
 
-				</div> 
+				</div>
 			</div>
 		</div>
 
-	</footer>	
-		
+	</footer>
 
 
 
 
-	
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="<?= base_url()?>public/js/libs/headroom.min.js"></script>
-    <script src="<?= base_url()?>public/js/libs/jQuery.headroom.min.js"></script>    	
-	<script src="<?= base_url()?>public/js/template.js"></script>        
+    <script src="<?= base_url()?>public/js/libs/jQuery.headroom.min.js"></script>
+	<script src="<?= base_url()?>public/js/template.js"></script>
 	<script src="<?= base_url()?>public/js/libs/bootstrap.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
 	<script src="<?= base_url()?>public/js/controllers/homeSliderCtrl.js"></script>
